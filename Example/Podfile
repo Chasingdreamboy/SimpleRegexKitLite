@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleRegexKitLite_Example' do
+  pod 'SimpleRegexKitLite', :path => '../'
+
+  target 'SimpleRegexKitLite_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
