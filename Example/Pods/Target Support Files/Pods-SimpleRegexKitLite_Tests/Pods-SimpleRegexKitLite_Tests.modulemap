@@ -1,0 +1,6 @@
+framework module Pods_SimpleRegexKitLite_Tests {
+  umbrella header "Pods-SimpleRegexKitLite_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

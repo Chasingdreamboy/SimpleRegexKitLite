@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleRegexKitLite'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of SimpleRegexKitLite.'
 
 # This description is used to generate tags and improve search results.
@@ -18,25 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+The simplied edition for RegexKitLite.
                        DESC
 
   s.homepage         = 'https://github.com/acct<blob>=<NULL>/SimpleRegexKitLite'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'acct<blob>=<NULL>' => 'wangerdong@treefinance.com.cn' }
-  s.source           = { :git => 'https://github.com/acct<blob>=<NULL>/SimpleRegexKitLite.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'SimpleRegexKitLite/Classes/**/*'
+  s.source           = { :git => 'https://github.com/Chasingdreamboy/SimpleRegexKitLite.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '7.0'
+   s.source_files = 'SimpleRegexKitLite/Classes/SimpleRegexKitLite.h'
+  s.public_header_files = 'SimpleRegexKitLite/Classes/SimpleRegexKitLite.h'
   
-  # s.resource_bundles = {
-  #   'SimpleRegexKitLite' => ['SimpleRegexKitLite/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'RegexKit' do |sub|
+  sub.source_files = 'SimpleRegexKitLite/Classes/RegexKitLite.{h,m}'
+  sub.frameworks = 'CoreFoundation'
+  sub.requires_arc = false
+  sub.libraries = 'icucore'
+  end 
 end

@@ -1,0 +1,18 @@
+PODS:
+  - SimpleRegexKitLite (0.0.1):
+    - SimpleRegexKitLite/RegexKit (= 0.0.1)
+  - SimpleRegexKitLite/RegexKit (0.0.1)
+
+DEPENDENCIES:
+  - SimpleRegexKitLite (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleRegexKitLite:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SimpleRegexKitLite: 35e6d7affe77319e5d32c5cb36b63b7fc935c76f
+
+PODFILE CHECKSUM: 5c4d056af1f34ccb8cbd1973a212e7df26db446f
+
+COCOAPODS: 1.2.1
