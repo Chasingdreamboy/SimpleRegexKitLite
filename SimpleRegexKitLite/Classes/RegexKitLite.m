@@ -1031,13 +1031,13 @@ exitNow:
 
 // We do not depend on this cleanup function being called.  It is used only as an extra safety net.  It is probably a bug in RegexKitLite if it is ever invoked and forced to take some kind of protective action.
 
-volatile NSUInteger rkl_debugCacheSpinLockCount = 0UL;
+volatile NSUInteger _rkl_debugCacheSpinLockCount = 0UL;
 
 void        rkl_debugCacheSpinLock          (void)                                            RKL_ATTRIBUTES(used, noinline, visibility("default"));
 static void rkl_cleanup_cacheSpinLockStatus (volatile NSUInteger *rkl_cacheSpinLockStatusPtr) RKL_ATTRIBUTES(used);
 
 void rkl_debugCacheSpinLock(void) {
-  rkl_debugCacheSpinLockCount++; // This is here primarily to prevent the optimizer from optimizing away the function.
+  _rkl_debugCacheSpinLockCount++; // This is here primarily to prevent the optimizer from optimizing away the function.
 }
 
 static void rkl_cleanup_cacheSpinLockStatus(volatile NSUInteger *rkl_cacheSpinLockStatusPtr) {
